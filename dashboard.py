@@ -12,11 +12,11 @@ DATABASE_URI = "postgresql+psycopg2://postgres:ecompassword@ecom-db.c0l260aqo4b2
 def load_data():
     try:
         conn = psycopg2.connect(
-            dbname="ecom",
-            user="postgres",
-            password="ecompassword",
-            host="ecom-db.c0l260aqo4b2.us-east-1.rds.amazonaws.com",
-            port="5432"
+            dbname="#",
+            user="#",
+            password="####",
+            host="######",
+            port="##"
         )
         query = "SELECT * FROM orders;"
         df = pd.read_sql(query, con=conn)
@@ -231,4 +231,5 @@ def update_charts(time_filter, n_intervals):
     return line_fig, bar_fig, pie_fig
 
 if __name__ == "__main__":
+
     app.run(debug=True)
