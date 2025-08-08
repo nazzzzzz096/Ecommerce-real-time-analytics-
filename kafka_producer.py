@@ -25,6 +25,7 @@ def generate_order():
 for _ in range(100):
     order = generate_order()
     print(f"Producing: {order}")
-    producer.send('ecom-orders', value=order)
+    producer.send('###', value=order)
     time.sleep(0.5)
+
 
