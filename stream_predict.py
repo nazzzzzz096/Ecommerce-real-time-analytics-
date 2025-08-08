@@ -45,10 +45,10 @@ def write_to_postgres(batch_df, batch_id):
     try:
         batch_df.write \
             .format("jdbc") \
-            .option("url", "jdbc:postgresql://ecom-db.c0l260aqo4b2.us-east-1.rds.amazonaws.com:5432/ecom") \
-            .option("dbtable", "orders") \
-            .option("user", "postgres") \
-            .option("password", "ecompassword") \
+            .option("url", "##########") \
+            .option("dbtable", "#####") \
+            .option("user", "#####") \
+            .option("password", "#####") \
             .option("driver", "org.postgresql.Driver") \
             .mode("append") \
             .save()
@@ -61,3 +61,4 @@ query = final_df.writeStream \
     .start()
 
 query.awaitTermination()
+
